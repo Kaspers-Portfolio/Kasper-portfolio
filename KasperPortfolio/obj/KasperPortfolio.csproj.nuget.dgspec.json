@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj": {}
+    "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj": {}
   },
   "projects": {
-    "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj": {
+    "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
+        "projectUniqueName": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
         "projectName": "KasperPortfolio",
-        "projectPath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
+        "projectPath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
         "packagesPath": "/Users/kaspartacuzz/.nuget/packages/",
-        "outputPath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/obj/",
+        "outputPath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kaspartacuzz/.nuget/NuGet/NuGet.Config"

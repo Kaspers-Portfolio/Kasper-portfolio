@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KasperPortfolio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3c40ef3e28e79c431124873982b8476a58d56d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("KasperPortfolio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KasperPortfolio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

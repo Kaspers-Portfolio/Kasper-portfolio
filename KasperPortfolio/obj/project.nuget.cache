@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+FU07esoRi4=",
+  "dgSpecHash": "mAqONNr7Xyg=",
   "success": true,
-  "projectFilePath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
+  "projectFilePath": "/Users/kaspartacuzz/Desktop/Kaspartacooker/Kasper-Portfolio/Kasper-portfolio/KasperPortfolio/KasperPortfolio.csproj",
   "expectedPackageFiles": [
     "/Users/kaspartacuzz/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.3/microsoft.aspnetcore.app.internal.assets.10.0.3.nupkg.sha512",
     "/Users/kaspartacuzz/.nuget/packages/microsoft.aspnetcore.authorization/10.0.3/microsoft.aspnetcore.authorization.10.0.3.nupkg.sha512",
