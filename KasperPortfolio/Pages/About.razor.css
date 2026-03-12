@@ -1,0 +1,160 @@
+:global(body) {
+    overflow-x: hidden;
+    background: #0b0a0b;
+}
+
+.about-shell {
+    position: relative;
+    min-height: calc(100vh - 3.5rem);
+    padding: 4.5rem 2.5rem 4rem;
+    background:
+        radial-gradient(55% 70% at 50% 40%, rgba(160, 20, 20, 0.45) 0%, rgba(15, 10, 10, 0.95) 60%),
+        #0b0a0b;
+    color: #f2f2f2;
+    overflow: hidden;
+    font-family: "Manrope", "Segoe UI", Tahoma, sans-serif;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.about-shell::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 120%;
+    background: radial-gradient(50% 50% at 50% 35%, rgba(220, 40, 40, 0.16) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.about-header,
+.about-hero,
+.about-section {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header h1 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 500;
+    margin: 0 0 1rem;
+}
+
+.accent-line {
+    display: inline-block;
+    width: 110px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(220, 40, 40, 0.9), rgba(220, 40, 40, 0));
+    box-shadow: 0 0 12px rgba(220, 40, 40, 0.45);
+}
+
+.about-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    align-items: start;
+}
+
+.about-photo img {
+    width: min(320px, 80vw);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.about-card,
+.section-card {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: inset 0 0 24px rgba(30, 12, 12, 0.4), 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.about-card h2,
+.section-card h3 {
+    margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+.about-card p,
+.section-card p {
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+}
+
+.section-card p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section {
+    margin-top: 2.5rem;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.focus-item h4 {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.focus-item p {
+    margin: 0;
+    color: #bdbdbd;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #d2d2d2;
+}
+
+.hobby-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(220, 40, 40, 0.85);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .about-shell {
+        padding: 3.5rem 1.5rem 3rem;
+    }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .focus-grid,
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+}
