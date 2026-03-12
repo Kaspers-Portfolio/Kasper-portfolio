@@ -1,0 +1,182 @@
+:global(body) {
+    overflow-x: hidden;
+    background: #0b0a0b;
+}
+
+.cv-shell {
+    position: relative;
+    min-height: calc(100vh - 3.5rem);
+    padding: 4.5rem 2.5rem 4rem;
+    background:
+        radial-gradient(55% 70% at 50% 40%, rgba(160, 20, 20, 0.45) 0%, rgba(15, 10, 10, 0.95) 60%),
+        #0b0a0b;
+    color: #f2f2f2;
+    overflow: hidden;
+    font-family: "Manrope", "Segoe UI", Tahoma, sans-serif;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.cv-shell::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 120%;
+    background: radial-gradient(50% 50% at 50% 35%, rgba(220, 40, 40, 0.16) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.cv-header,
+.cv-layout {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cv-header h1 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+}
+
+.cv-name {
+    color: #c8c8c8;
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+}
+
+.accent-line {
+    display: inline-block;
+    width: 110px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(220, 40, 40, 0.9), rgba(220, 40, 40, 0));
+    box-shadow: 0 0 12px rgba(220, 40, 40, 0.45);
+}
+
+.cv-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.6fr);
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.cv-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 1.25rem;
+}
+
+.cv-section-spaced h2 {
+    margin-top: 1rem;
+}
+
+.section-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background: rgba(220, 40, 40, 0.15);
+    border: 1px solid rgba(220, 40, 40, 0.7);
+    box-shadow: 0 0 10px rgba(220, 40, 40, 0.35);
+}
+
+.cv-card {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: inset 0 0 24px rgba(30, 12, 12, 0.4), 0 18px 40px rgba(0, 0, 0, 0.35);
+    margin-bottom: 1.5rem;
+}
+
+.cv-card:last-child {
+    margin-bottom: 0;
+}
+
+.cv-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.1rem;
+}
+
+.cv-card h4 {
+    margin: 1.2rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+.cv-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.cv-muted {
+    color: #bdbdbd;
+    margin: 0;
+}
+
+.cv-year {
+    color: #9f9f9f;
+    font-size: 0.9rem;
+}
+
+.cv-body {
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin: 0.8rem 0 0;
+}
+
+.cv-list {
+    margin: 0.8rem 0 0;
+    padding-left: 1.2rem;
+    color: #c7c7c7;
+    line-height: 1.7;
+}
+
+.cv-list.simple {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.cv-list.simple li {
+    padding: 0.35rem 0;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d2d2d2;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1000px) {
+    .cv-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .cv-shell {
+        padding: 3.5rem 1.5rem 3rem;
+    }
+
+    .cv-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
