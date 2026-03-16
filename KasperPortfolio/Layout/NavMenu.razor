@@ -1,23 +1,30 @@
 ﻿<div class="top-row navbar navbar-dark">
     <div class="container-fluid nav-container">
-        <nav class="nav nav-center nav-horizontal">
+        <div class="nav-mobile-bar">
+            <button class="nav-toggle @(mobileOpen ? "is-open" : string.Empty)" type="button" @onclick="ToggleMobile" aria-label="Åbn menu" aria-expanded="@mobileOpen" aria-controls="mobile-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="nav nav-center nav-horizontal @(mobileOpen ? "is-open" : string.Empty)">
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="CloseMobile">
                     <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Forside
                 </NavLink>
             </div>
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="om-mig">
+                <NavLink class="nav-link" href="om-mig" @onclick="CloseMobile">
                     <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Om mig
                 </NavLink>
             </div>
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="cv">
+                <NavLink class="nav-link" href="cv" @onclick="CloseMobile">
                     <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> CV
                 </NavLink>
             </div>
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="projekter">
+                <NavLink class="nav-link" href="projekter" @onclick="CloseMobile">
                     <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Projekter
                 </NavLink>
             </div>
@@ -26,4 +33,15 @@
 </div>
 
 @code {
+    private bool mobileOpen;
+
+    private void ToggleMobile()
+    {
+        mobileOpen = !mobileOpen;
+    }
+
+    private void CloseMobile()
+    {
+        mobileOpen = false;
+    }
 }

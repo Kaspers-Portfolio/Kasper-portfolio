@@ -1,20 +1,21 @@
 :global(body) {
     overflow-x: hidden;
-    background: #0b0a0b;
+    background: var(--bg-900);
 }
 
 .about-shell {
     position: relative;
     min-height: calc(100vh - 3.5rem);
-    padding: 4.5rem 2.5rem 4rem;
+    padding: calc(4.5rem + var(--nav-height)) 2.5rem 4rem;
     background:
-        radial-gradient(55% 70% at 50% 40%, rgba(160, 20, 20, 0.45) 0%, rgba(15, 10, 10, 0.95) 60%),
-        #0b0a0b;
-    color: #f2f2f2;
+        radial-gradient(65% 75% at 48% 18%, rgba(78, 130, 196, 0.22) 0%, rgba(244, 247, 251, 0.95) 60%),
+        linear-gradient(180deg, rgba(244, 247, 251, 0.98) 0%, rgba(238, 243, 248, 0.98) 100%);
+    color: var(--navy-900);
     overflow: hidden;
     font-family: "Manrope", "Segoe UI", Tahoma, sans-serif;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+    margin-top: calc(var(--nav-height) * -1);
 }
 
 .about-shell::before {
@@ -22,9 +23,9 @@
     position: absolute;
     inset: -20% -10% auto -10%;
     height: 120%;
-    background: radial-gradient(50% 50% at 50% 35%, rgba(220, 40, 40, 0.16) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(55% 55% at 50% 30%, rgba(40, 90, 150, 0.12) 0%, rgba(244, 247, 251, 0) 70%);
     pointer-events: none;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .about-header,
@@ -46,8 +47,7 @@
     display: inline-block;
     width: 110px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(220, 40, 40, 0.9), rgba(220, 40, 40, 0));
-    box-shadow: 0 0 12px rgba(220, 40, 40, 0.45);
+    background: var(--accent-line);
 }
 
 .about-hero {
@@ -63,18 +63,18 @@
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-100);
+    box-shadow: var(--shadow-soft);
+    background: var(--surface-900);
 }
 
 .about-card,
 .section-card {
-    background: rgba(20, 20, 20, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--surface-900);
+    border: 1px solid var(--border-100);
     border-radius: 18px;
     padding: 2rem;
-    box-shadow: inset 0 0 24px rgba(30, 12, 12, 0.4), 0 18px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--shadow-subtle);
 }
 
 .about-card h2,
@@ -85,7 +85,7 @@
 
 .about-card p,
 .section-card p {
-    color: #c7c7c7;
+    color: var(--slate-500);
     line-height: 1.7;
     margin: 0 0 1rem;
 }
@@ -112,7 +112,7 @@
 
 .focus-item p {
     margin: 0;
-    color: #bdbdbd;
+    color: var(--slate-500);
 }
 
 .hobby-grid {
@@ -126,25 +126,25 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    color: #d2d2d2;
+    color: var(--slate-600);
 }
 
 .hobby-icon {
     width: 24px;
     height: 24px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--surface-800);
+    border: 1px solid var(--border-100);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: rgba(220, 40, 40, 0.85);
+    color: var(--navy-700);
     font-weight: 600;
 }
 
 @media (max-width: 900px) {
     .about-shell {
-        padding: 3.5rem 1.5rem 3rem;
+        padding: calc(3.5rem + var(--nav-height)) 1.5rem 3rem;
     }
 
     .about-hero {
@@ -153,6 +153,32 @@
 }
 
 @media (max-width: 640px) {
+    .about-shell {
+        width: 100%;
+        margin-left: 0;
+        margin-top: calc(var(--nav-height) * -1);
+        padding: calc(3.25rem + var(--nav-height)) 1.1rem 2.75rem;
+    }
+
+    .about-header h1 {
+        font-size: clamp(2.2rem, 8.5vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .about-hero {
+        gap: 1.75rem;
+        margin-top: 2rem;
+    }
+
+    .about-card,
+    .section-card {
+        padding: 1.5rem;
+    }
+
+    .about-section {
+        margin-top: 2rem;
+    }
+
     .focus-grid,
     .hobby-grid {
         grid-template-columns: 1fr;
