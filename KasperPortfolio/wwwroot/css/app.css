@@ -59,6 +59,8 @@ body.reveal-ready .reveal--up {
 .reveal-delay-2 { --reveal-delay: 0.12s; }
 .reveal-delay-3 { --reveal-delay: 0.18s; }
 .reveal-delay-4 { --reveal-delay: 0.24s; }
+.reveal-delay-5 { --reveal-delay: 0.30s; }
+.reveal-delay-6 { --reveal-delay: 0.36s; }
 
 @media (prefers-reduced-motion: reduce) {
     .reveal,
