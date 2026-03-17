@@ -4,8 +4,8 @@
     color-scheme: light;
     --navy-900: #0f1b2d;
     --navy-800: #142845;
-    --navy-700: #1a355e;
-    --navy-600: #20406f;
+    --navy-700: rgba(0, 74, 218, 0.6);
+    --navy-600: rgba(8, 92, 191, 0.63);
     --slate-600: #4f6072;
     --slate-500: #667587;
     --bg-900: #f4f7fb;
