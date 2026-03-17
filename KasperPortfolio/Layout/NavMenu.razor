@@ -1,39 +1,47 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Portfolio</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<div class="top-row navbar navbar-dark">
+    <div class="container-fluid nav-container">
+        <div class="nav-mobile-bar">
+            <button class="nav-toggle @(mobileOpen ? "is-open" : string.Empty)" type="button" @onclick="ToggleMobile" aria-label="Åbn menu" aria-expanded="@mobileOpen" aria-controls="mobile-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="nav nav-center nav-horizontal @(mobileOpen ? "is-open" : string.Empty)">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="CloseMobile">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Forside
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="om-mig" @onclick="CloseMobile">
+                    <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Om mig
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="cv" @onclick="CloseMobile">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> CV
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="projekter" @onclick="CloseMobile">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Projekter
+                </NavLink>
+            </div>
+        </nav>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Forside
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="om-mig">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Hvem er jeg?
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="cv">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> CV
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
 @code {
-    private bool collapseNavMenu = true;
+    private bool mobileOpen;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private void ToggleMobile()
     {
-        collapseNavMenu = !collapseNavMenu;
+        mobileOpen = !mobileOpen;
+    }
+
+    private void CloseMobile()
+    {
+        mobileOpen = false;
     }
 }
