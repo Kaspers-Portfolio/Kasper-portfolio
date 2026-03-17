@@ -37,15 +37,9 @@
 }
 
 .cv-header h1 {
-    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-size: clamp(2.6rem, 4.7vw, 3.7rem);
     font-weight: 500;
     margin: 0 0 0.5rem;
-}
-
-.cv-name {
-    color: var(--slate-600);
-    margin: 0 0 1rem;
-    font-size: 1.15rem;
 }
 
 .accent-line {
@@ -62,13 +56,26 @@
     margin-top: 2.5rem;
 }
 
+.cv-section + .cv-section {
+    margin-top: 2.6rem;
+}
+
 .cv-section h2 {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-size: 1.35rem;
-    font-weight: 600;
-    margin: 0 0 1.25rem;
+    font-size: 1.45rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    margin: 0 0 1.35rem;
+}
+
+.cv-section h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--border-100);
+    opacity: 0.7;
 }
 
 .cv-section-spaced h2 {
@@ -84,12 +91,16 @@
 }
 
 .cv-card {
-    background: var(--surface-900);
-    border: 1px solid var(--border-100);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(32, 64, 111, 0.12);
     border-radius: 18px;
-    padding: 1.8rem;
-    box-shadow: var(--shadow-subtle);
-    margin-bottom: 1.5rem;
+    padding: 1.6rem;
+    box-shadow: 0 12px 24px rgba(20, 37, 63, 0.08);
+    margin-bottom: 1.1rem;
+}
+
+.cv-card-compact {
+    padding-bottom: 1.8rem;
 }
 
 .cv-card:last-child {
@@ -104,13 +115,14 @@
 .cv-card h4 {
     margin: 1.2rem 0 0.6rem;
     font-size: 1rem;
+    color: var(--navy-900);
 }
 
 .cv-card-header {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    align-items: baseline;
+    align-items: flex-start;
 }
 
 .cv-muted {
@@ -146,6 +158,43 @@
     padding: 0.35rem 0;
 }
 
+.cv-section-exp .cv-card {
+    border-left: 2px solid rgba(32, 64, 111, 0.18);
+}
+
+.cv-section-edu .cv-card {
+    border-left: 2px solid rgba(32, 64, 111, 0.12);
+}
+
+.cv-side .cv-section {
+    position: relative;
+    padding: 0.35rem 0 1.2rem;
+}
+
+
+.cv-side .cv-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(32, 64, 111, 0.08);
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.cv-side .cv-card h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    color: var(--slate-500);
+}
+
+.cv-side .cv-list.simple li {
+    border-bottom: 1px solid rgba(32, 64, 111, 0.08);
+    padding: 0.45rem 0;
+}
+
+.cv-side .cv-list.simple li:last-child {
+    border-bottom: none;
+}
+
 .chip-row {
     display: flex;
     flex-wrap: wrap;
@@ -178,7 +227,7 @@
     }
 
     .cv-header h1 {
-        font-size: clamp(2.2rem, 8.5vw, 3rem);
+        font-size: clamp(2.1rem, 8vw, 2.85rem);
         line-height: 1.1;
     }
 
@@ -188,6 +237,10 @@
 
     .cv-card {
         padding: 1.5rem;
+    }
+
+    .cv-intro .cv-body {
+        max-width: 100%;
     }
 
     .cv-card-header {
