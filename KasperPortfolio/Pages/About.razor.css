@@ -52,15 +52,21 @@
 
 .about-hero {
     display: grid;
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 1.5fr);
+    gap: 1.4rem;
     margin-top: 2.5rem;
     align-items: start;
 }
 
+.about-photo {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .about-photo img {
-    width: min(320px, 80vw);
-    aspect-ratio: 4 / 5;
+    width: min(280px, 72vw);
+    max-width: 280px;
+    aspect-ratio: 4 / 4.5;
     object-fit: cover;
     border-radius: 18px;
     border: 1px solid var(--border-100);
@@ -214,6 +220,10 @@
 
     .about-hero {
         grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        justify-content: center;
     }
 }
 
