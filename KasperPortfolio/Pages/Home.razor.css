@@ -113,13 +113,19 @@
     border-radius: 10px;
     background: var(--surface-900);
     border: 1px solid var(--border-100);
+    color: var(--navy-700);
+    opacity: 1;
+    visibility: visible;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-icon-link svg {
     width: 18px;
     height: 18px;
-    fill: var(--navy-700);
+    display: block;
+    fill: currentColor;
+    opacity: 1;
+    visibility: visible;
 }
 
 .contact-icon-link:hover {
@@ -128,7 +134,11 @@
 }
 
 .contact-icon-link:hover svg {
-    fill: var(--navy-900);
+    fill: currentColor;
+}
+
+.contact-icon-link:hover {
+    color: var(--navy-900);
 }
 
 .hero-photo {
